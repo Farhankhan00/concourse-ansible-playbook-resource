@@ -13,7 +13,8 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*; \
     pip install \
       ansible \
-      boto; \
+      requests \
+      boto3; \
     mkdir -p /etc/ansible; \
     echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
